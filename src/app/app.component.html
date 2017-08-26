@@ -1,6 +1,9 @@
 <sw-search [suggestions]="suggestions"
            [filterText]="filterText"
            (filterTextChange)="onFilterTextChange($event)"
+           [selectedStarship]="selectedStarship"
+           (selectedStarshipChange)="onSelectedStarshipChange($event)"
            [errorMessage]="errorMessage">
 </sw-search>
-<sw-starship></sw-starship>
+<sw-starship *ngIf="selectedStarship" [starship]="selectedStarship">
+</sw-starship>

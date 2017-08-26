@@ -18,6 +18,7 @@
 sw-app {
   display: flex;
 }
+
 sw-app > * {
   width: 50%;
 }
@@ -47,17 +48,27 @@ input {
 .starship {
   position: relative;
   padding: 15px;
+
+  &:nth-child(n){
+    background-color: #f5f5f5;
+  }
+
+  &:nth-child(2n) {
+    background-color: white;
+  }
+
 }
 
-.starship:nth-child(2n + 1) {
-  background: #f5f5f5;
+.starship.starship-selected:nth-child(n + 1), .starship.starship-selected:nth-child(2n + 1){
+  background-color: #e5e5e5
 }
 
-.starship:nth-child(2n) {
-  background: white;
-}
-
-#model {
+.model {
   font-size: 14px;
   font-style: italic;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: bold;
 }

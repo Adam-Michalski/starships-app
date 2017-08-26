@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { StarshipService } from './app.service';
 
@@ -12,6 +11,7 @@ export class AppComponent {
   public filterText = '';
   public suggestions: Array<any>;
   public errorMessage;
+  public selectedStarship: any;
 
   constructor(private starshipService: StarshipService) { }
 
@@ -34,5 +34,10 @@ export class AppComponent {
       }, error => {
         this.errorMessage = error;
       });
+  }
+
+  public onSelectedStarshipChange(selectedStarship: any) {
+    console.log(selectedStarship)
+    this.selectedStarship = selectedStarship;
   }
 }

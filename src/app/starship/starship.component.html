@@ -1,1 +1,15 @@
-Starship details should appear here (see instructions).
+<div class="starship">
+  <div>{{starship.name}}</div>
+  <div *ngIf="starship.model"><span class="label">Model:</span>{{ starship.model }}</div>
+  <div *ngIf="starship.crew"><span class="label">Crew:</span>{{ starship.crew }}</div>
+  <div *ngIf="starship.cargo_capacity"><span class="label">Cargo_capacity:</span>{{ starship.cargo_capacity }}</div>
+  <div *ngIf="starship.consumables"><span class="label">Consumables:</span>{{ starship.consumables }}</div>
+  <div *ngIf="starship.cost_in_credits"><span class="label">Cost_in_credits:</span>{{ starship.cost_in_credits }}</div>
+  <div *ngIf="starship.films && starship.films.length > 0"><span class="label">Films:</span><a *ngFor="let film of starship.films" [href]="film">{{film}}</a></div>
+  <div *ngIf="starship.hyperdrive_rating"><span class="label">Hyperdrive_rating:</span>{{ starship.hyperdrive_rating }}</div>
+  <div *ngIf="starship.length"><span class="label">Length:</span>{{ starship.length }}</div>
+  <div *ngIf="starship.manufacturer"><span class="label">Manufacturer:</span>{{ starship.manufacturer }}</div>
+  <div *ngIf="starship.max_atmosphering_speed"><span class="label">Max_atmosphering_speed:</span>{{ starship.max_atmosphering_speed }}</div>
+  <div *ngIf="starship.passengers"><span class="label">Passengers:</span>{{ starship.passengers }}</div>
+  <div *ngIf="starship.pilots && starship.pilots.length > 0"><span class="label">Pilots:</span>{{ starship.pilots }}</div>
+</div>
