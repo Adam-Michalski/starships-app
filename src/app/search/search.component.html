@@ -1,0 +1,8 @@
+<input [ngModel]="filterText" (ngModelChange)="onFilterTextChange($event)" placeholder="Search Star Wars starships">
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+<div>
+  <div class="starship" *ngFor="let suggestion of suggestions">
+    <div>{{suggestion.name}}</div>
+    <div id="model">{{ suggestion.model }}</div>
+  </div>
+</div>
